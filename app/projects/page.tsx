@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
   return (
@@ -27,19 +28,31 @@ export default function Projects() {
         </Link>
       </div>
 
-      {/* Coming Soon Message - Centered */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-2xl">
-          <div className="paper-texture bg-[#f4f1ea] p-12 md:p-16 rounded-lg shadow-2xl text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-serif font-normal mb-6 leading-tight">
+      {/* Projects Content - Centered */}
+      <div className="relative z-10 min-h-screen flex items-start justify-center py-20 px-4">
+        <div className="w-full max-w-3xl">
+          <div className="mb-8 text-center animate-fade-in">
+            <h1 className="text-4xl md:text-5xl text-white font-serif font-normal mb-3 drop-shadow-lg">
               Projects
             </h1>
-            <p className="text-lg md:text-xl text-stone-700 font-serif italic">
-              Coming Soon
+            <p className="text-white/80 font-serif text-sm md:text-base drop-shadow-md">
+              Things I've built and experiments along the way
             </p>
-            <div className="mt-8 text-stone-600 font-serif text-sm md:text-base">
-              <p>
-                Works in progress, experiments, and creative endeavors taking shape.
+          </div>
+
+          <div className="space-y-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <ProjectCard
+              title="Nexportify"
+              description="A web application for analyzing and visualizing Spotify playlist data. Export playlist metadata, explore audio features like danceability and energy, and discover patterns in your listening habits through interactive data visualizations. Built using Spotify's Web API with support for both quick analysis and detailed CSV exports."
+              liveUrl="https://visheshvs.github.io/nexportify/"
+              githubUrl="https://github.com/visheshvs/nexportify"
+              tags={["Music", "Data Visualization", "Spotify API", "Open Source"]}
+            />
+
+            {/* Placeholder for future projects */}
+            <div className="paper-texture bg-[#f4f1ea]/60 p-8 rounded-lg border-2 border-dashed border-stone-400/50 text-center">
+              <p className="text-stone-600 font-serif italic">
+                More projects coming soon...
               </p>
             </div>
           </div>
