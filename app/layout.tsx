@@ -17,6 +17,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Studio",
   description: "A place for things made",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
