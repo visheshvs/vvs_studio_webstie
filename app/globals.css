@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafaf9;
+  --foreground: #1c1917;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1917;
+    --foreground: #fafaf9;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-lora), 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl font-normal mb-6 leading-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-normal mb-4 leading-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-normal mb-3 leading-tight;
+  }
+  p {
+    @apply mb-4 text-base md:text-lg;
+  }
+  a {
+    @apply underline decoration-1 underline-offset-2 hover:decoration-2 transition-all;
+  }
+}
+
+@layer utilities {
+  .reading-width {
+    max-width: 70ch;
+  }
+  
+  .font-sans {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-serif {
+    font-family: var(--font-lora), Georgia, serif;
+  }
+}
+
+/* Prose customization for journal entries */
+.prose {
+  @apply text-stone-700 dark:text-stone-300;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  @apply font-serif font-normal text-stone-900 dark:text-stone-100;
+}
+
+.prose strong {
+  @apply font-semibold text-stone-900 dark:text-stone-100;
+}
+
+.prose a {
+  @apply text-stone-900 dark:text-stone-100 underline decoration-stone-400 dark:decoration-stone-600 hover:decoration-stone-900 dark:hover:decoration-stone-100 transition-colors;
+}
+
+.prose code {
+  @apply text-stone-900 dark:text-stone-100 bg-stone-100 dark:bg-stone-800 px-1 py-0.5 rounded text-sm;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-stone-300 dark:border-stone-700 italic text-stone-600 dark:text-stone-400;
+}
+
+.prose img {
+  @apply rounded-sm;
+}
+
+.prose hr {
+  @apply border-stone-300 dark:border-stone-700 my-12;
+}
+
+/* Paper texture effect */
+.paper-texture {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 3px
+    );
+  background-size: 3px 3px, 3px 3px, 3px 3px, 3px 3px;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Journal page styles with book-like appearance */
+.journal-page {
+  background: linear-gradient(to right, 
+    #f4f1ea 0%, 
+    #f8f6f0 5%, 
+    #faf9f5 50%, 
+    #f8f6f0 95%, 
+    #f4f1ea 100%
+  );
+  box-shadow: 
+    inset -5px 0 10px -5px rgba(0, 0, 0, 0.1),
+    inset 5px 0 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.journal-binding {
+  background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.journal-spread {
+  perspective: 1500px;
+}
+
+.journal-page-left {
+  transform-origin: right center;
+  box-shadow: 
+    5px 0 15px -5px rgba(0, 0, 0, 0.2),
+    inset -5px 0 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.journal-page-right {
+  transform-origin: left center;
+  box-shadow: 
+    -5px 0 15px -5px rgba(0, 0, 0, 0.2),
+    inset 5px 0 10px -5px rgba(0, 0, 0, 0.1);
+}
+
