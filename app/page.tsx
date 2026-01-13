@@ -76,6 +76,16 @@ export default function StudioHomepage() {
             label="Projects"
           />
 
+          {/* About Hotspot */}
+          <Hotspot
+            href="/about"
+            top="48%"
+            left="88%"
+            width="11%"
+            height="40%"
+            label="About"
+          />
+
           {/* Optional: Minimal invitational copy */}
           <div className="absolute bottom-8 left-8 right-8 text-center md:text-left">
             <p className="text-white text-sm md:text-base drop-shadow-lg text-center">

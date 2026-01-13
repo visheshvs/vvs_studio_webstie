@@ -32,6 +32,12 @@ const menuItems: MenuItem[] = [
     image: '/images/studio/projects.png',
     description: 'Things built',
   },
+  {
+    title: 'About',
+    href: '/about',
+    image: '/images/studio/headshot.png',
+    description: 'Who I am',
+  },
 ];
 
 export default function MenuView() {
@@ -49,7 +55,7 @@ export default function MenuView() {
         </div>
 
         {/* Menu Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
           {menuItems.map((item, index) => (
             <Link
               key={item.href}
@@ -59,17 +65,21 @@ export default function MenuView() {
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              {/* Image */}
+              {/* Image or Color Background */}
               <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {item.title === 'About' ? (
+                  <div className="w-full h-full bg-gradient-to-br from-[#d4c4b0] to-[#e8dcc8] transition-transform duration-500 group-hover:scale-110" />
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
               </div>
 
               {/* Content Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 transition-opacity duration-300">
+              <div className={`absolute inset-0 ${item.title === 'About' ? 'bg-gradient-to-t from-stone-800/80 via-stone-700/40 to-transparent' : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent'} flex flex-col justify-end p-6 transition-opacity duration-300`}>
                 <h2 className="text-2xl md:text-3xl font-serif text-white mb-1">
                   {item.title}
                 </h2>
