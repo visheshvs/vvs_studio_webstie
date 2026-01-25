@@ -21,7 +21,7 @@ export default function ViewSwitcher({ viewMode, onToggle }: ViewSwitcherProps) 
           <div className="w-full h-full">
             <Image
               src={viewMode === 'studio' ? '/images/studio/VVS_Logo_pos.png' : '/images/studio/VVS_Logo_neg.png'}
-              alt="VVS Studio Logo"
+              alt="VVS Studia Medio Logo"
               width={48}
               height={48}
               className="w-full h-full object-cover transition-opacity duration-300"

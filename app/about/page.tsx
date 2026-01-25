@@ -42,7 +42,7 @@ export default function AboutPage() {
             {/* About Text */}
             <div className="text-stone-700 dark:text-stone-300 space-y-4 mb-8 text-center md:text-left">
               <p>
-                Welcome to my studio,a place for things made, finished and in progress. I work at the intersection of 
+                Welcome to my Studia Medio, Between ideas and form, finished and in progress. I work at the intersection of 
                 technology and creativity, creating things and exploring ideas through research, code, and art.
               </p>
               <p>

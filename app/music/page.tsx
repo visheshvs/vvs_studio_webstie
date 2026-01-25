@@ -39,7 +39,7 @@ export default function Music() {
             </p>
             <div className="mt-8 text-stone-600 font-serif text-sm md:text-base">
               <p>
-                Sounds, rhythms, and melodies that fill the studio space.
+                Sounds, rhythms, and melodies that fill the Studia Medio space.
               </p>
             </div>
           </div>

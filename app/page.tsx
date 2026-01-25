@@ -21,11 +21,11 @@ export default function StudioHomepage() {
       {/* Conditionally render based on view mode */}
       {viewMode === 'studio' ? (
         <main className="relative w-full h-screen overflow-hidden">
-          {/* Studio Background Image */}
+          {/* Studia Medio Background Image */}
           <div className="absolute inset-0">
             <img
               src="/images/studio/studio.png"
-              alt="Studio space"
+              alt="Studia Medio space"
               className="object-cover w-full h-full"
             />
           </div>
@@ -34,7 +34,7 @@ export default function StudioHomepage() {
           <div className="absolute inset-0 bg-black/5" />
 
           {/* Interactive Hotspots */}
-          {/* Adjust top, left, width, height based on your studio image */}
+          {/* Adjust top, left, width, height based on your Studia Medio image */}
           
           {/* Journal Hotspot */}
           <Hotspot
@@ -89,7 +89,7 @@ export default function StudioHomepage() {
           {/* Optional: Minimal invitational copy */}
           <div className="absolute bottom-8 left-8 right-8 text-center md:text-left">
             <p className="text-white text-sm md:text-base drop-shadow-lg text-center">
-              A place for things made
+              Between ideas and form
             </p>
           </div>
         </main>

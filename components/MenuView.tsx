@@ -47,10 +47,10 @@ export default function MenuView() {
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-serif text-stone-900 dark:text-stone-100 mb-3">
-            Studio
+            Studia Medio
           </h1>
           <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base">
-            A place for things made
+            Between ideas and form
           </p>
         </div>
 
