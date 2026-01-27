@@ -34,6 +34,19 @@ export default async function JournalList() {
       {/* Journal Entries - Centered */}
       <div className="relative z-10 min-h-screen flex items-center justify-center py-20 px-4">
         <div className="w-full max-w-2xl">
+          {/* Substack Subscription */}
+          <div className="flex justify-center mb-8">
+            <iframe 
+              src="https://visheshvsingh.substack.com/embed" 
+              width="480" 
+              height="300" 
+              style={{border:'1px solid #EEE', background:'white'}} 
+              frameBorder="0" 
+              scrolling="no"
+              className="rounded-lg shadow-lg"
+            ></iframe>
+          </div>
+          
           {allEntries.length === 0 ? (
             <div className="paper-texture bg-[#f4f1ea] p-8 rounded-lg shadow-2xl">
               <p className="text-stone-700 text-center font-serif">

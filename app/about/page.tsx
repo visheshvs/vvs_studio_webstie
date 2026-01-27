@@ -21,6 +21,7 @@ export default function AboutPage() {
       <div className="relative z-10 min-h-screen flex items-center justify-center py-20 px-4">
         <div className="w-full max-w-3xl">
           <div className="animate-fade-in">
+                    
             {/* Headshot */}
             <div className="flex justify-center mb-8">
               <div className="relative w-40 h-40 rounded-full overflow-hidden">
@@ -128,6 +129,19 @@ export default function AboutPage() {
                   {' '}- in case I need an academic job
                 </li>
               </ul>
+            </div>
+            
+            {/* Substack Subscription */}
+            <div className="flex justify-center mt-8 mb-8">
+              <iframe 
+                src="https://visheshvsingh.substack.com/embed" 
+                width="480" 
+                height="300" 
+                style={{border:'1px solid #EEE', background:'white'}} 
+                frameBorder="0" 
+                scrolling="no"
+                className="rounded-lg shadow-lg"
+              ></iframe>
             </div>
           </div>
         </div>
