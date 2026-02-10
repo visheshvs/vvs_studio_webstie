@@ -47,6 +47,15 @@ npm run dev
 
 Visit `http://localhost:3000` to see the studio.
 
+### Setup & Customization
+
+See **[SETUP_GUIDE.md](SETUP_GUIDE.md)** for detailed instructions on:
+- Positioning hotspots on your studio photo
+- Adding journal entries (local content and external links)
+- Customizing images, colors, and typography
+- Deployment to Vercel or Netlify
+- Troubleshooting common issues
+
 ### Build
 
 ```bash
@@ -151,7 +160,14 @@ studio/
 
 ## Adding Journal Entries
 
-Create a new `.mdx` file in `content/journal/`:
+The journal supports two types of entries:
+
+1. **Local Entries**: Full MDX content hosted on your site
+2. **External Links**: Link to Substack or other platforms (displays badge and opens in new tab)
+
+For detailed instructions on creating both types, see the [SETUP_GUIDE.md](SETUP_GUIDE.md#2-add-journal-entries).
+
+Quick example of a local entry in `content/journal/`:
 
 ```mdx
 ---
@@ -161,8 +177,6 @@ excerpt: "A brief preview of the entry"
 ---
 
 Your content here with full **markdown** support.
-
-Images can be referenced from `/images/journal/`.
 ```
 
 The content layer (`lib/journal.ts`) automatically discovers and parses all MDX files.

@@ -29,6 +29,7 @@ export async function getAllJournalEntries(): Promise<JournalEntry[]> {
         title: data.title,
         date: data.date,
         excerpt: data.excerpt,
+        externalLink: data.externalLink,
         content,
       } as JournalEntry;
     });
@@ -62,6 +63,7 @@ export async function getJournalEntry(slug: string): Promise<JournalEntry | null
       title: data.title,
       date: data.date,
       excerpt: data.excerpt,
+      externalLink: data.externalLink,
       content,
     };
   } catch (error) {

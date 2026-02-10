@@ -60,9 +60,13 @@ document.addEventListener('mousemove', (e) => {
 5. Note the `top` and `left` values from the console
 6. Update the Hotspot component with these values
 
-### 2. Add More Journal Entries
+### 2. Add Journal Entries
 
-Create new `.mdx` files in `content/journal/`:
+You can add two types of journal entries:
+
+#### Option A: Local MDX Entries (Full Content on Your Site)
+
+Create new `.mdx` files in `content/journal/` for content hosted directly on your site:
 
 ```mdx
 ---
@@ -80,6 +84,33 @@ Your content here with full **markdown** support.
 
 ![Alt text](/images/journal/your-image.jpg)
 ```
+
+When clicked, these entries display the full content on your site at `/journal/[slug]`.
+
+#### Option B: External Links (Link to Substack or Other Sites)
+
+To feature posts from Substack or other platforms, create "stub" MDX files that link externally:
+
+```mdx
+---
+title: "Your Substack Post Title"
+date: "2024-12-17"
+excerpt: "Brief preview that appears in the journal list"
+externalLink: "https://yourname.substack.com/p/your-post-slug"
+---
+
+This body content won't be displayed since clicking opens the external link.
+You can leave this empty or add notes for yourself.
+```
+
+When clicked, these entries:
+- Display a "Read on Substack ↗" badge in the journal list
+- Open the external URL in a new tab
+- Keep users aware they're leaving your site
+
+**Use Case**: Perfect for private Substacks or linking to posts on other platforms while maintaining a unified journal view.
+
+See `content/journal/example-substack-post.mdx` for a complete template.
 
 ### 3. Add Images to Journal Entries
 
