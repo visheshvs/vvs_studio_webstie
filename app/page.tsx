@@ -88,6 +88,9 @@ export default function StudioHomepage() {
 
           {/* Optional: Minimal invitational copy */}
           <div className="absolute bottom-8 left-8 right-8 text-center md:text-left">
+            <h1 className="text-white text-lg md:text-xl font-serif drop-shadow-lg text-center mb-1">
+              Studia Medio
+            </h1>
             <p className="text-white text-sm md:text-base drop-shadow-lg text-center">
               Between ideas and form
             </p>

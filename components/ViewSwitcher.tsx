@@ -2,6 +2,7 @@
 
 import { ViewMode } from '@/lib/useViewMode';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 interface ViewSwitcherProps {
   viewMode: ViewMode;
@@ -9,14 +10,28 @@ interface ViewSwitcherProps {
 }
 
 export default function ViewSwitcher({ viewMode, onToggle }: ViewSwitcherProps) {
+  const [isFlipping, setIsFlipping] = useState(false);
+
+  useEffect(() => {
+    // Trigger flip animation when viewMode changes
+    setIsFlipping(true);
+    const timer = setTimeout(() => setIsFlipping(false), 600);
+    return () => clearTimeout(timer);
+  }, [viewMode]);
+
+  const handleClick = () => {
+    setIsFlipping(true);
+    onToggle();
+  };
+
   return (
     <button
-      onClick={onToggle}
+      onClick={handleClick}
       className="fixed top-6 left-6 z-50 group"
       aria-label="Switch view"
     >
-      <div className="relative">
-        <div className="w-12 h-12 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
+      <div className="relative perspective-1000">
+        <div className={`w-12 h-12 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden ${isFlipping ? 'animate-flip' : ''}`}>
           {/* VVS Logo - different for each view */}
           <div className="w-full h-full">
             <Image
