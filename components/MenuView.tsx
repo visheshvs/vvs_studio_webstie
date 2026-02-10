@@ -27,6 +27,12 @@ const menuItems: MenuItem[] = [
     description: 'Sonic experiments',
   },
   {
+    title: 'Moving Images',
+    href: '/moving-images',
+    image: '/images/studio/moving_images.png',
+    description: 'Visual narratives',
+  },
+  {
     title: 'Projects',
     href: '/projects',
     image: '/images/studio/projects.png',

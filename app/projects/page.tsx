@@ -49,6 +49,13 @@ export default function Projects() {
               tags={["Music", "Data Visualization", "Spotify API", "Open Source"]}
             />
 
+            <ProjectCard
+              title="Chat with P6 Schedule"
+              description="A Python-based tool that turns natural-language questions into SQL queries for Primavera P6 schedule data. Import and parse P6 XER files and PDF schedule exports, store them in SQLite databases, and interactively query activities, dates, durations, and float using plain English. Built with OpenAI's API to support quick insights, structured analysis, and clean CSV/database exports from complex scheduling data."
+              githubUrl="https://github.com/visheshvs/Chat_with_P6_Schedule"
+              tags={["Python", "Primavera P6", "SQL", "OpenAI API", "Open Source"]}
+            />
+
             {/* Placeholder for future projects */}
             <div className="paper-texture bg-[#f4f1ea]/60 p-8 rounded-lg border-2 border-dashed border-stone-400/50 text-center">
               <p className="text-stone-600 font-serif italic">
