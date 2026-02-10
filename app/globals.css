@@ -53,6 +53,12 @@ body {
   .font-serif {
     font-family: var(--font-lora), Georgia, serif;
   }
+
+  /* Mobile-friendly viewport height that accounts for browser UI */
+  .mobile-screen-height {
+    height: 100vh; /* Fallback for older browsers */
+    height: 100dvh; /* Dynamic viewport height - adjusts as browser UI shows/hides */
+  }
 }
 
 /* Prose customization for journal entries */

@@ -20,7 +20,7 @@ export default function StudioHomepage() {
 
       {/* Conditionally render based on view mode */}
       {viewMode === 'studio' ? (
-        <main className="relative w-full h-screen overflow-hidden">
+        <main className="relative w-full mobile-screen-height overflow-hidden">
           {/* Studia Medio Background Image */}
           <div className="absolute inset-0">
             <img
