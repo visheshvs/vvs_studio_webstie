@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import { getMusicPostMetadata } from '@/lib/music';
+import MusicCard from '@/components/MusicCard';
 
-export default function Music() {
+export default async function Music() {
+  const allPosts = await getMusicPostMetadata();
+
   return (
     <main className="relative min-h-screen w-full overflow-hidden">
       {/* Closeup Music Background */}
@@ -27,22 +31,33 @@ export default function Music() {
         </Link>
       </div>
 
-      {/* Coming Soon Message - Centered */}
+      {/* Music Posts - Centered, Journal Style */}
       <div className="relative z-10 min-h-screen flex items-center justify-center py-20 px-4">
         <div className="w-full max-w-2xl">
-          <div className="paper-texture bg-[#f4f1ea] p-12 md:p-16 rounded-lg shadow-2xl text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-serif font-normal mb-6 leading-tight">
-              Music
-            </h1>
-            <p className="text-lg md:text-xl text-stone-700 font-serif italic">
-              Coming Soon
-            </p>
-            <div className="mt-8 text-stone-600 font-serif text-sm md:text-base">
-              <p>
-                Sounds, rhythms, and melodies that fill the Studia Medio space.
+          <h1 className="text-4xl md:text-5xl text-stone-200 font-serif font-normal mb-8 text-center">
+            Music
+          </h1>
+          <p className="text-stone-300 font-serif text-center mb-10">
+            Sounds, rhythms, and melodies that fill the Studia Medio space.
+          </p>
+
+          {allPosts.length === 0 ? (
+            <div className="paper-texture bg-[#f4f1ea] p-8 rounded-lg shadow-2xl">
+              <p className="text-stone-700 text-center font-serif">
+                No posts yet. Check back soon.
               </p>
             </div>
-          </div>
+          ) : (
+            <div className="space-y-4">
+              {allPosts.map((entry, index) => (
+                <MusicCard
+                  key={entry.slug}
+                  entry={entry}
+                  animationDelay={index * 100}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </main>
