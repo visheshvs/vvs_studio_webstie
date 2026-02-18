@@ -12,4 +12,5 @@ export interface MusicPostMetadata {
 
 export interface MusicPost extends MusicPostMetadata {
   content: string;
+  contentRight?: string;  // Content to render on the right page (from splitAt onward)
 }

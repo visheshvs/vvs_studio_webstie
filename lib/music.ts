@@ -42,12 +42,23 @@ export async function getMusicPost(slug: string): Promise<MusicPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    const splitAt = data.splitAt as string | undefined;
+    let contentLeft = content;
+    let contentRight: string | undefined;
+
+    if (splitAt && content.includes(splitAt)) {
+      const splitIndex = content.indexOf(splitAt);
+      contentLeft = content.slice(0, splitIndex).trim();
+      contentRight = content.slice(splitIndex).trim();
+    }
+
     return {
       slug,
       title: data.title,
       excerpt: data.excerpt,
       links: data.links ?? [],
-      content,
+      content: contentLeft,
+      ...(contentRight && { contentRight }),
     };
   } catch {
     return null;

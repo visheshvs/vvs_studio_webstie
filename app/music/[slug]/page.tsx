@@ -66,27 +66,47 @@ export default async function MusicPostPage({ params }: MusicPostPageProps) {
             </header>
 
             <div className="prose prose-stone prose-lg max-w-none font-serif text-stone-800">
-              <MDXRemote source={post.content} />
+              <MDXRemote
+                source={post.content}
+                components={{
+                  a: (props) => (
+                    <a {...props} target="_blank" rel="noopener noreferrer" />
+                  ),
+                }}
+              />
             </div>
           </article>
 
           {/* Binding */}
           <div className="journal-binding w-full md:w-1 h-1 md:h-auto" />
 
-          {/* Right Page - Decorative */}
-          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16 hidden md:block">
-            <div className="h-full flex flex-col justify-between">
-              <div className="text-right text-stone-400 text-sm font-serif mb-8">
-                {post.title && (
-                  <span className="italic opacity-60">{post.title}</span>
-                )}
+          {/* Right Page - Content or Decorative */}
+          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16 hidden md:block overflow-y-auto">
+            {post.contentRight ? (
+              <div className="prose prose-stone prose-lg max-w-none font-serif text-stone-800">
+                <MDXRemote
+                  source={post.contentRight}
+                  components={{
+                    a: (props) => (
+                      <a {...props} target="_blank" rel="noopener noreferrer" />
+                    ),
+                  }}
+                />
               </div>
-              <div className="text-center text-stone-400 text-sm font-serif mt-auto">
-                <span className="inline-block border-t border-stone-300 pt-2 px-4">
-                  Music
-                </span>
+            ) : (
+              <div className="h-full flex flex-col justify-between">
+                <div className="text-right text-stone-400 text-sm font-serif mb-8">
+                  {post.title && (
+                    <span className="italic opacity-60">{post.title}</span>
+                  )}
+                </div>
+                <div className="text-center text-stone-400 text-sm font-serif mt-auto">
+                  <span className="inline-block border-t border-stone-300 pt-2 px-4">
+                    Music
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
