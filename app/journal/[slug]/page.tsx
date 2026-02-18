@@ -63,8 +63,8 @@ export default async function JournalEntryPage({ params }: JournalEntryPageProps
           {/* Binding */}
           <div className="journal-binding w-full md:w-1 h-1 md:h-auto" />
 
-          {/* Right Page - Decorative/Continuation */}
-          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16 hidden md:block">
+          {/* Right Page - Decorative/Continuation (stacks below left on narrow viewports) */}
+          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16">
             <div className="h-full flex flex-col justify-between">
               {/* Decorative corner element */}
               <div className="text-right text-stone-400 text-sm font-serif mb-8">

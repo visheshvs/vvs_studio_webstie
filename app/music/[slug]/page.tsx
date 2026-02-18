@@ -80,8 +80,8 @@ export default async function MusicPostPage({ params }: MusicPostPageProps) {
           {/* Binding */}
           <div className="journal-binding w-full md:w-1 h-1 md:h-auto" />
 
-          {/* Right Page - Content or Decorative */}
-          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16 hidden md:block overflow-y-auto">
+          {/* Right Page - Content or Decorative (stacks below left on narrow viewports) */}
+          <div className="journal-page journal-page-right paper-texture flex-1 p-8 md:p-12 lg:p-16 overflow-y-auto">
             {post.contentRight ? (
               <div className="prose prose-stone prose-lg max-w-none font-serif text-stone-800">
                 <MDXRemote
