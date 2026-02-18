@@ -22,37 +22,59 @@ export default function AboutPage() {
         <div className="w-full max-w-3xl">
           <div className="animate-fade-in">
                     
-            {/* Headshot */}
-            <div className="flex justify-center mb-8">
-              <div className="relative w-40 h-40 rounded-full overflow-hidden">
-                <Image
-                  src="/images/studio/headshot.png"
-                  alt="Vishesh Vikram Singh"
-                  width={160}
-                  height={160}
-                  className="object-cover w-full h-full"
-                />
-              </div>
+            {/* Headshot - no crop, no frame */}
+            <div className="mb-10">
+              <Image
+                src="/images/studio/headshot.png"
+                alt="Vishesh Vikram Singh"
+                width={640}
+                height={800}
+                className="w-full max-w-[480px] h-auto object-contain mx-auto"
+              />
             </div>
 
             {/* Name */}
-            <h1 className="text-3xl md:text-4xl font-serif text-center text-stone-900 dark:text-stone-100 mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-900 dark:text-stone-100 mt-8 mb-4">
               Vishesh Vikram Singh
-            </h1>
+            </h2>
 
             {/* About Text */}
-            <div className="text-stone-700 dark:text-stone-300 space-y-4 mb-8 text-center md:text-left">
+            <div className="text-stone-700 dark:text-stone-300 space-y-4 mb-8 text-center md:text-left font-serif">
               <p>
-                Welcome to my Studia Medio, Between ideas and form, finished and in progress. I work at the intersection of 
-                technology and creativity, creating things and exploring ideas through research, code, and art.
+                Welcome! I grew up in India and have been settled in the East Bay of the San Francisco Bay Area for the last few years. Living in different places and cultures has shaped how I see the world and the kind of work I'm drawn to.
               </p>
               <p>
-                When I'm not working, you'll find me documenting thoughts in my journal, 
-                taking photographs, listening to music, or working on a side project.
+                I work at the intersection of construction, engineering, technology, creativity, and business. Most of what I do involves building products, exploring ideas through research, and experimenting with art and design.
+              </p>
+              <p>
+                Outside of work, I like taking photos, curating music, consuming art of all kinds, and working on small side projects that keep me curious.
+              </p>
+              <p>
+                This (Studia Medio) is a space for things I have created, thinking about, building, or still figuring out.
+              </p>
+
+              <p>
+                <strong className="font-serif font-bold">Studia Medio</strong>
+                <br />
+                <em className="text-stone-600 dark:text-stone-400">noun</em>
+              </p>
+              <ol className="list-decimal list-inside space-y-2 ml-2">
+                <li>A studio for all kinds of mediums of work: code, writing, photography, moving-images, research, music, design, and anything in between.</li>
+                <li>A space (physical or digital) where ideas are explored without needing to fit into one label.</li>
+                <li>From the Latin <em>studia</em>: zeal, dedication, curiosity, and the pursuit of learning.</li>
+                <li>A reminder that work doesn't have to live in silos — technical and creative can coexist.</li>
+              </ol>
+              <p>
+                For me, it simply means having a place to explore different forms of expression with intention and curiosity.
+              </p>
+              <p>
+                This site is a mix of finished thoughts and works in progress.
               </p>
             </div>
 
             {/* Social Links */}
+            <p><strong className="font-serif font-bold">Connect</strong></p>
+
             <div className="text-stone-700 dark:text-stone-300 space-y-3 max-w-2xl mx-auto">
               <ul className="space-y-3 list-disc list-inside">
                 <li>
@@ -129,19 +151,6 @@ export default function AboutPage() {
                   {' '}- in case I need an academic job
                 </li>
               </ul>
-            </div>
-            
-            {/* Substack Subscription */}
-            <div className="flex justify-center mt-8 mb-8">
-              <iframe 
-                src="https://visheshvsingh.substack.com/embed" 
-                width="480" 
-                height="300" 
-                style={{border:'1px solid #EEE', background:'white'}} 
-                frameBorder="0" 
-                scrolling="no"
-                className="rounded-lg shadow-lg"
-              ></iframe>
             </div>
           </div>
         </div>

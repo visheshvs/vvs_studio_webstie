@@ -42,7 +42,7 @@ const menuItems: MenuItem[] = [
     title: 'About',
     href: '/about',
     image: '/images/studio/headshot.png',
-    description: 'Who I am',
+    description: 'Who I am/What this is',
   },
 ];
 
