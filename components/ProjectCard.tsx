@@ -6,9 +6,63 @@ interface ProjectCardProps {
   liveUrl?: string;
   githubUrl?: string;
   tags?: string[];
+  compact?: boolean;
 }
 
-export default function ProjectCard({ title, description, liveUrl, githubUrl, tags }: ProjectCardProps) {
+export default function ProjectCard({ title, description, liveUrl, githubUrl, tags, compact }: ProjectCardProps) {
+  const linkTagClass = "inline-block text-xs bg-stone-700 hover:bg-stone-600 text-white px-2 py-1 rounded-full font-sans no-underline transition-colors";
+
+  if (compact) {
+    return (
+      <div className="group paper-texture bg-[#f4f1ea] p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-stone-300/50">
+        {/* Links as tags - same style as MusicCard */}
+        <div className="flex flex-wrap gap-2 mb-3">
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkTagClass}
+            >
+              View Project ↗
+            </a>
+          )}
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkTagClass}
+            >
+              GitHub ↗
+            </a>
+          )}
+        </div>
+
+        <h2 className="text-xl md:text-2xl mb-3 text-stone-900 group-hover:text-stone-700 transition-colors font-serif leading-tight">
+          {title}
+        </h2>
+
+        <p className="text-sm md:text-base text-stone-700 line-clamp-2 font-serif leading-relaxed">
+          {description}
+        </p>
+
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-3">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="text-xs uppercase tracking-wider px-2 py-1 bg-stone-200 text-stone-600 rounded-full font-sans"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="paper-texture bg-[#f4f1ea] p-6 md:p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-300/50">
       <h2 className="text-2xl md:text-3xl text-stone-900 font-serif font-normal mb-4 leading-tight">

@@ -24,11 +24,12 @@ export async function getAllMusicPosts(): Promise<MusicPost[]> {
         title: data.title,
         excerpt: data.excerpt,
         links: data.links ?? [],
+        order: data.order,
         content,
       } as MusicPost;
     });
 
-  return allPosts;
+  return allPosts.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 }
 
 export async function getMusicPostMetadata(): Promise<MusicPostMetadata[]> {
@@ -57,6 +58,7 @@ export async function getMusicPost(slug: string): Promise<MusicPost | null> {
       title: data.title,
       excerpt: data.excerpt,
       links: data.links ?? [],
+      order: data.order,
       content: contentLeft,
       ...(contentRight && { contentRight }),
     };

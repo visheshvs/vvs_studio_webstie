@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getMusicPostMetadata } from '@/lib/music';
 import MusicCard from '@/components/MusicCard';
+import ProjectCard from '@/components/ProjectCard';
 
 export default async function Music() {
   const allPosts = await getMusicPostMetadata();
@@ -56,6 +57,16 @@ export default async function Music() {
                   animationDelay={index * 100}
                 />
               ))}
+              <div className="animate-fade-in" style={{ animationDelay: `${allPosts.length * 100}ms` }}>
+                <ProjectCard
+                  title="Nexportify"
+                  description="A web application for analyzing and visualizing Spotify playlist data. Export playlist metadata, explore audio features like danceability and energy, and discover patterns in your listening habits through interactive data visualizations. Built using Spotify's Web API with support for both quick analysis and detailed CSV exports."
+                  liveUrl="https://visheshvs.github.io/nexportify/"
+                  githubUrl="https://github.com/visheshvs/nexportify"
+                  tags={["Music", "Data Visualization", "Spotify API", "Open Source"]}
+                  compact
+                />
+              </div>
             </div>
           )}
         </div>

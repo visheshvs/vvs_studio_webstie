@@ -8,6 +8,7 @@ export interface MusicPostMetadata {
   title?: string;
   excerpt?: string;
   links?: MusicPostLink[];
+  order?: number;
 }
 
 export interface MusicPost extends MusicPostMetadata {
