@@ -33,15 +33,10 @@ export default function AboutPage() {
               />
             </div>
 
-            {/* Name */}
-            <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-900 dark:text-stone-100 mt-8 mb-4">
-              Vishesh Vikram Singh
-            </h2>
-
             {/* About Text */}
-            <div className="text-stone-700 dark:text-stone-300 space-y-4 mb-8 text-left font-serif">
+            <div className="text-stone-700 dark:text-stone-300 space-y-4 mb-8 text-left font-serif mt-8">
               <p>
-                Welcome! I grew up in India and have been settled in the East Bay of the San Francisco Bay Area for the last few years. Living in different places and cultures has shaped how I see the world and the kind of work I'm drawn to.
+                Hi, I'm Vishesh Vikram Singh. I grew up in India and have been settled in the East Bay of the San Francisco Bay Area for the last few years. Living in different places and cultures has shaped how I see the world and the kind of work I'm drawn to.
               </p>
               <p>
                 I work at the intersection of construction, engineering, technology, creativity, and business. Most of what I do involves building products, exploring ideas through research, and experimenting with art and design.
