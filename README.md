@@ -4,7 +4,7 @@ A minimalist web application representing a personal creative studio as a digita
 
 ## Overview
 
-Studio is not a portfolio or a feed—it's a **place** built from real photographs of a physical studio where creative artifacts live.
+Studio is not a portfolio or a feed—it's a place built from real photographs of a physical studio where creative artifacts live.
 
 ## Current Features
 
