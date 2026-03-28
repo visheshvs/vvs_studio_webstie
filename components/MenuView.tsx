@@ -73,19 +73,15 @@ export default function MenuView() {
             >
               {/* Image or Color Background */}
               <div className="aspect-[4/3] overflow-hidden">
-                {item.title === 'About' ? (
-                  <div className="w-full h-full bg-gradient-to-br from-[#d4c4b0] to-[#e8dcc8] transition-transform duration-500 group-hover:scale-110" />
-                ) : (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                )}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
 
               {/* Content Overlay */}
-              <div className={`absolute inset-0 ${item.title === 'About' ? 'bg-gradient-to-t from-stone-800/80 via-stone-700/40 to-transparent' : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent'} flex flex-col justify-end p-6 transition-opacity duration-300`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 transition-opacity duration-300">
                 <h2 className="text-2xl md:text-3xl font-serif text-white mb-1">
                   {item.title}
                 </h2>
