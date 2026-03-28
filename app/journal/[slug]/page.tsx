@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import { format } from 'date-fns';
 import { getJournalEntry, getAllJournalSlugs } from '@/lib/journal';
+import { formatJournalDate, getJournalYear } from '@/lib/journalDate';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ export default async function JournalEntryPage({ params }: JournalEntryPageProps
     notFound();
   }
 
-  const formattedDate = format(new Date(entry.date), 'MMMM d, yyyy');
+  const formattedDate = formatJournalDate(entry.date);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-stone-800 via-stone-700 to-stone-900 py-8 md:py-12 px-4">
@@ -76,7 +76,7 @@ export default async function JournalEntryPage({ params }: JournalEntryPageProps
               {/* Decorative page number */}
               <div className="text-center text-stone-400 text-sm font-serif mt-auto">
                 <span className="inline-block border-t border-stone-300 pt-2 px-4">
-                  {new Date(entry.date).getFullYear()}
+                  {getJournalYear(entry.date)}
                 </span>
               </div>
             </div>

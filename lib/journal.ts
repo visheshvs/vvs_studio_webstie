@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { JournalEntry, JournalMetadata } from '@/types/journal';
+import { parseJournalDate } from '@/lib/journalDate';
 
 const journalDirectory = path.join(process.cwd(), 'content/journal');
 
@@ -36,7 +37,7 @@ export async function getAllJournalEntries(): Promise<JournalEntry[]> {
 
   // Sort by date (newest first)
   return allEntries.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
+    return parseJournalDate(b.date).getTime() - parseJournalDate(a.date).getTime();
   });
 }
 

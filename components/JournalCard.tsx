@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { format } from 'date-fns';
 import { JournalMetadata } from '@/types/journal';
+import { formatJournalDate } from '@/lib/journalDate';
 
 interface JournalCardProps {
   entry: JournalMetadata;
 }
 
 export default function JournalCard({ entry }: JournalCardProps) {
-  const formattedDate = format(new Date(entry.date), 'MMMM d, yyyy');
+  const formattedDate = formatJournalDate(entry.date);
   const isExternal = !!entry.externalLink;
   const href = isExternal ? entry.externalLink! : `/journal/${entry.slug}`;
   const target = isExternal ? '_blank' : undefined;
