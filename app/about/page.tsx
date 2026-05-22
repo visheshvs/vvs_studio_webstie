@@ -127,6 +127,28 @@ export default function AboutPage() {
                 </li>
                 <li>
                   <a
+                    href="https://activeestimating.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-stone-800 dark:text-stone-200 hover:text-stone-600 dark:hover:text-stone-400 transition-colors underline decoration-stone-400 dark:decoration-stone-600"
+                  >
+                    Active Estimating
+                  </a>
+                  {' '}- Current career focus, revolutionizing how we cost complex design and construction projects
+                </li>
+                <li>
+                  <a
+                    href="https://visheshvsingh.notion.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-stone-800 dark:text-stone-200 hover:text-stone-600 dark:hover:text-stone-400 transition-colors underline decoration-stone-400 dark:decoration-stone-600"
+                  >
+                    Work Portfolio
+                  </a>
+                  {' '}- passions that also pay my bills
+                </li>
+                <li>
+                  <a
                     href="https://scholar.google.com/citations?user=NvQJp9IAAAAJ&hl=en&oi=ao"
                     target="_blank"
                     rel="noopener noreferrer"
