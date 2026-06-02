@@ -11,6 +11,7 @@ const contactInfo = {
   phone: '+15108331422',
   location: 'Oakland, CA',
   website: 'https://visheshvs.com/card',
+  studiaMedio: 'https://visheshvs.com/',
   instagram: 'https://www.instagram.com/vvsishere/',
   linkedin: 'https://www.linkedin.com/in/visheshvikram/',
   github: 'https://github.com/visheshvs',
@@ -185,7 +186,7 @@ export default function CardPage() {
                 Active Estimating
               </a>
               <a
-                href={contactInfo.website}
+                href={contactInfo.studiaMedio}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center py-3 px-4 bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 rounded-xl text-sm font-sans font-semibold no-underline hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors"
