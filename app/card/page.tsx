@@ -23,6 +23,7 @@ const vcfContent = [
   'VERSION:3.0',
   `FN:${contactInfo.name}`,
   'TITLE:Active Estimating',
+  'PHOTO;VALUE=URI:https://visheshvs.com/images/studio/headshot.png',
   `EMAIL;TYPE=HOME,INTERNET:${contactInfo.emailPersonal}`,
   `EMAIL;TYPE=WORK,INTERNET:${contactInfo.emailWork}`,
   `TEL;TYPE=CELL:${contactInfo.phone}`,
