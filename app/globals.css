@@ -212,3 +212,80 @@ body {
     inset 5px 0 10px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* 404 — flat paper sheet, Magritte "Treachery of Images" palette */
+.not-found-paper {
+  position: relative;
+  aspect-ratio: 5 / 3;
+  width: 100%;
+  transform: rotate(-1.25deg);
+  background-color: #f2ede4;
+  border-radius: 1px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.04) inset,
+    0 6px 20px rgba(0, 0, 0, 0.14),
+    0 20px 48px rgba(0, 0, 0, 0.18);
+}
+
+.not-found-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse 70% 45% at 35% 18%, rgba(0, 0, 0, 0.035) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 40% at 72% 28%, rgba(0, 0, 0, 0.03) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 35% at 48% 55%, rgba(255, 255, 255, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 18% 68%, rgba(0, 0, 0, 0.025) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.not-found-paper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(
+      118deg,
+      transparent 0px,
+      transparent 28px,
+      rgba(0, 0, 0, 0.012) 28px,
+      rgba(0, 0, 0, 0.012) 29px
+    );
+  pointer-events: none;
+}
+
+.not-found-paper-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 2rem 3rem;
+}
+
+.not-found-code {
+  font-family: ui-monospace, 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #1e293b;
+  line-height: 1;
+}
+
+.not-found-code-bracket {
+  color: #64748b;
+}
+
+.not-found-magritte-text {
+  color: #1a1612;
+  font-size: clamp(1.25rem, 4.5vw, 1.65rem);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
