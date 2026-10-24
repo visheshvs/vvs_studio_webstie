@@ -39,11 +39,11 @@ export default function ProjectCard({ title, description, liveUrl, githubUrl, ta
           )}
         </div>
 
-        <h2 className="text-xl md:text-2xl mb-3 text-stone-900 group-hover:text-stone-700 transition-colors font-serif leading-tight">
+        <h2 className="text-xl md:text-2xl mb-3 text-stone-900 group-hover:text-stone-700 transition-colors font-serif max-md:leading-tight">
           {title}
         </h2>
 
-        <p className="text-sm md:text-base text-stone-700 line-clamp-2 font-serif leading-relaxed">
+        <p className="text-sm md:text-base text-stone-700 line-clamp-2 font-serif max-md:leading-relaxed">
           {description}
         </p>
 
@@ -65,11 +65,11 @@ export default function ProjectCard({ title, description, liveUrl, githubUrl, ta
 
   return (
     <div className="paper-texture bg-[#f4f1ea] p-6 md:p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-300/50">
-      <h2 className="text-2xl md:text-3xl text-stone-900 font-serif font-normal mb-4 leading-tight">
+      <h2 className="text-2xl md:text-3xl text-stone-900 font-serif font-normal mb-4 max-md:leading-tight">
         {title}
       </h2>
       
-      <p className="text-base md:text-lg text-stone-700 font-serif leading-relaxed mb-6">
+      <p className="text-base md:text-lg text-stone-700 font-serif max-md:leading-relaxed mb-6">
         {description}
       </p>
 

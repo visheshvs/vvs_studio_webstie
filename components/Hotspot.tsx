@@ -23,11 +23,11 @@ export default function Hotspot({ href, top, left, width, height, label }: Hotsp
       aria-label={label}
     >
       {/* Invisible hitbox with subtle hover effect */}
-      <div className="w-full h-full transition-all duration-300 group-hover:ring-2 group-hover:ring-white/40 group-hover:bg-white/5 rounded-sm" />
+      <div className="w-full h-full transition-all duration-300 group-hover:ring-2 group-hover:ring-white/40 group-hover:bg-white/5 rounded-xs" />
       
       {/* Optional visible label on hover */}
       {label && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-black/80 text-white text-sm font-serif rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-black/80 text-white text-sm font-serif rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
           {label}
         </div>
       )}

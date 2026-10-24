@@ -59,7 +59,7 @@ export default async function MusicPostPage({ params }: MusicPostPageProps) {
               )}
 
               {post.title && (
-                <h1 className="text-3xl md:text-4xl lg:text-5xl text-stone-900 font-serif font-normal leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl text-stone-900 font-serif font-normal max-md:leading-tight">
                   {post.title}
                 </h1>
               )}
