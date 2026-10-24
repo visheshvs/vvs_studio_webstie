@@ -31,7 +31,7 @@ export default function Photobooks() {
       <div className="relative z-10 min-h-screen flex items-center justify-center py-20 px-4">
         <div className="w-full max-w-2xl">
           <div className="paper-texture bg-[#f4f1ea] p-12 md:p-16 rounded-lg shadow-2xl text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-serif font-normal mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-serif font-normal mb-6 max-md:leading-tight">
               Photobooks
             </h1>
             <p className="text-lg md:text-xl text-stone-700 font-serif italic">

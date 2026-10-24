@@ -32,13 +32,13 @@ export default function JournalCard({ entry }: JournalCardProps) {
       </time>
       
       {entry.title && (
-        <h2 className="text-xl md:text-2xl mb-3 text-stone-900 group-hover:text-stone-700 transition-colors font-serif leading-tight">
+        <h2 className="text-xl md:text-2xl mb-3 text-stone-900 group-hover:text-stone-700 transition-colors font-serif max-md:leading-tight">
           {entry.title}
         </h2>
       )}
       
       {entry.excerpt && (
-        <p className="text-sm md:text-base text-stone-700 line-clamp-2 font-serif leading-relaxed">
+        <p className="text-sm md:text-base text-stone-700 line-clamp-2 font-serif max-md:leading-relaxed">
           {entry.excerpt}
         </p>
       )}

@@ -49,7 +49,7 @@ export default async function JournalEntryPage({ params }: JournalEntryPageProps
               </time>
               
               {entry.title && (
-                <h1 className="text-3xl md:text-4xl lg:text-5xl text-stone-900 font-serif font-normal leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl text-stone-900 font-serif font-normal max-md:leading-tight">
                   {entry.title}
                 </h1>
               )}
