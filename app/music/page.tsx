@@ -60,7 +60,7 @@ export default async function Music() {
               <div className="animate-fade-in" style={{ animationDelay: `${allPosts.length * 100}ms` }}>
                 <ProjectCard
                   title="Nexportify"
-                  description="A web application for analyzing and visualizing Spotify playlist data. Export playlist metadata, explore audio features like danceability and energy, and discover patterns in your listening habits through interactive data visualizations. Built using Spotify's Web API with support for both quick analysis and detailed CSV exports."
+                  description="An open-source fork of Exportify that turns your Spotify into data. Export any playlist to CSV and analyze its genres, artists, labels, release years and audio features, or load your Extended Streaming History to explore years of listening habits, skips and obsessions. Everything runs in your browser."
                   liveUrl="https://visheshvs.github.io/nexportify/"
                   githubUrl="https://github.com/visheshvs/nexportify"
                   tags={["Music", "Data Visualization", "Spotify API", "Open Source"]}
