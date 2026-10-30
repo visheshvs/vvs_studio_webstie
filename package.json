@@ -34,7 +34,7 @@
     "gray-matter": "^4.0.3",
     "next": "^16.4.3",
     "next-mdx-remote": "^6.0.0",
-    "postcss": "^8.5.31",
+    "postcss": "^8.5.32",
     "qrcode.react": "^4.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
