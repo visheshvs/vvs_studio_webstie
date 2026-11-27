@@ -56,6 +56,14 @@ export default function Projects() {
               tags={["Python", "Primavera P6", "SQL", "OpenAI API", "Open Source"]}
             />
 
+            <ProjectCard
+              title="ConTech Landscape"
+              description="An open, weekly-updated directory of technology companies across the AECO ecosystem (architecture, engineering, construction and operations), including property tech. Browse companies by category, customer and project phase, from design and preconstruction to field operations, supply chain and smart buildings, or download the full dataset as CSV or JSON."
+              liveUrl="https://visheshvs.github.io/contech-landscape/"
+              githubUrl="https://github.com/visheshvs/contech-landscape"
+              tags={["Construction Tech", "AECO", "Directory", "Open Data", "Open Source"]}
+            />
+
             {/* Placeholder for future projects */}
             <div className="paper-texture bg-[#f4f1ea]/60 p-8 rounded-lg border-2 border-dashed border-stone-400/50 text-center">
               <p className="text-stone-600 font-serif italic">
