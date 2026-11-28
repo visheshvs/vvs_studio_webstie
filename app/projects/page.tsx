@@ -42,6 +42,14 @@ export default function Projects() {
 
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
             <ProjectCard
+              title="ConTech Landscape"
+              description="An open, weekly-updated directory of technology companies across the AECO ecosystem (architecture, engineering, construction and operations), covering construction and property tech companies (with a focus on North America). Browse companies by category, customer and project phase, from design and preconstruction to field operations, supply chain and smart buildings."
+              liveUrl="https://visheshvs.github.io/contech-landscape/"
+              githubUrl="https://github.com/visheshvs/contech-landscape"
+              tags={["Construction Tech", "AECO", "Directory", "Open Data", "Open Source"]}
+            />
+
+            <ProjectCard
               title="Nexportify"
               description="An open-source fork of Exportify that turns your Spotify into data. Export any playlist to CSV and analyze its genres, artists, labels, release years and audio features, or load your Extended Streaming History to explore years of listening habits, skips and obsessions. Everything runs in your browser."
               liveUrl="https://visheshvs.github.io/nexportify/"
@@ -54,14 +62,6 @@ export default function Projects() {
               description="A Python-based tool that turns natural-language questions into SQL queries for Primavera P6 schedule data. Import and parse P6 XER files and PDF schedule exports, store them in SQLite databases, and interactively query activities, dates, durations, and float using plain English. Built with OpenAI's API to support quick insights, structured analysis, and clean CSV/database exports from complex scheduling data."
               githubUrl="https://github.com/visheshvs/Chat_with_P6_Schedule"
               tags={["Python", "Primavera P6", "SQL", "OpenAI API", "Open Source"]}
-            />
-
-            <ProjectCard
-              title="ConTech Landscape"
-              description="An open, weekly-updated directory of technology companies across the AECO ecosystem (architecture, engineering, construction and operations), including property tech. Browse companies by category, customer and project phase, from design and preconstruction to field operations, supply chain and smart buildings, or download the full dataset as CSV or JSON."
-              liveUrl="https://visheshvs.github.io/contech-landscape/"
-              githubUrl="https://github.com/visheshvs/contech-landscape"
-              tags={["Construction Tech", "AECO", "Directory", "Open Data", "Open Source"]}
             />
 
             {/* Placeholder for future projects */}
